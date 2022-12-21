@@ -1,14 +1,56 @@
-$plot_wide = Read-Host "Wide plot for WI23 data? (y/n)"
+# Figure out what term to use
+$term = ""
+$input_term = Read-Host "Enter term to process (e.g. WI23, FA23, SP24, etc.)"
+if ($input_term.Length -ne 4 -and $input_term.Length -ne 5) {
+    Write-Warning "[warn] Invalid term entered."
+    exit 1
+}
+
+$input_term = $input_term.ToUpper()
+# Extract first two characters of input_term
+$term_type = $input_term.Substring(0, 2)
+if ($term_type -eq "FA") {
+    $term += "Fall"
+} elseif ($term_type -eq "WI") {
+    $term += "Winter"
+} elseif ($term_type -eq "SP") {
+    $term += "Spring"
+} elseif ($term_type -eq "S1") {
+    $term += "Summer1"
+} elseif ($term_type -eq "S2") {
+    $term += "Summer2"
+} else {
+    Write-Warning "[warn] Invalid term entered."
+    exit 1  
+}
+
+$term_year = $input_term.Substring(2, 2)
+# Is this a number?
+if ($term_year -notmatch "^[0-9]+$") {
+    Write-Warning "[warn] Invalid year entered."
+    exit 1
+}
+
+$term += "20" + $term_year
+
+$term_additional = $input_term.Substring(4)
+if ($term_additional.Length -gt 0) {
+    if ($term_additional -eq "D") {
+        $term += "Drop"
+    } else {
+        Write-Warning "[warn] Invalid additional arguments entered."
+        exit 1
+    }
+}
+
+$plot_wide = Read-Host "Wide plot for data? (y/n)"
 if ($plot_wide.ToLower() -ne "y") {
     $plot_wide = "n"
 }
 
 if ($plot_wide -eq "y") {
-    Write-Host "Acknowledged: will create wide plots for WI23 data."
+    Write-Host "Acknowledged: will create wide plots for data."
 }
-
-$terms = @("WI23", "WI23G")
-$terms_processed = $terms -join ", " 
 
 # check if UCSDHistEnrollData folder exists
 # If it does, pull from repo for latest updates.
