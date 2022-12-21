@@ -1,8 +1,5 @@
 __pycache__/
 .idea/
-enrollment.csv
-/TEST/
-*/individual_sections/*
 _misc/rust/*/target/*
 
 *.exe

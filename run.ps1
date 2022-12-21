@@ -7,7 +7,18 @@ if ($input_term.Length -ne 4 -and $input_term.Length -ne 5) {
 }
 
 $input_term = $input_term.ToUpper()
-# Extract first two characters of input_term
+
+# First, get the full year
+$term_year = $input_term.Substring(2, 2)
+# Is this a number?
+if ($term_year -notmatch "^[0-9]+$") {
+    Write-Warning "[warn] Invalid year entered."
+    exit 1
+}
+
+$term += "20" + $term_year
+
+# Then, get the term itself
 $term_type = $input_term.Substring(0, 2)
 if ($term_type -eq "FA") {
     $term += "Fall"
@@ -24,22 +35,15 @@ if ($term_type -eq "FA") {
     exit 1  
 }
 
-$term_year = $input_term.Substring(2, 2)
-# Is this a number?
-if ($term_year -notmatch "^[0-9]+$") {
-    Write-Warning "[warn] Invalid year entered."
-    exit 1
-}
-
-$term += "20" + $term_year
-
+# Finally, add any additional arguments
 $term_additional = $input_term.Substring(4)
 if ($term_additional.Length -gt 0) {
-    if ($term_additional -eq "D") {
+    if ($term_additional.Contains("G")) {
+        $term += "Grad"
+    }
+
+    if ($term_additional.Contains("D")) {
         $term += "Drop"
-    } else {
-        Write-Warning "[warn] Invalid additional arguments entered."
-        exit 1
     }
 }
 
