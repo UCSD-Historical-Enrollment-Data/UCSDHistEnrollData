@@ -66,21 +66,19 @@ else {
 }
 
 $sw = [Diagnostics.Stopwatch]::StartNew()
-foreach ($term in $terms) {
-    Write-Output "================== Processing $term. =================="
-    Write-Output "`tCleaning raw CSVs."
-    python clean_raw_csvs.py
+Write-Output "================== Processing $term. =================="
+Write-Output "`tCleaning raw CSVs."
+python clean_raw_csvs.py
 
-    Write-Output "`tCategorizing enroll data."
-    python enroll_data_cleaner.py $term
+Write-Output "`tCategorizing enroll data."
+python enroll_data_cleaner.py $term
 
-    Write-Output "`tPlotting overall data."
-    python plot.py o
-    Write-Output "`tPlotting section data."
-    python plot.py s
+Write-Output "`tPlotting overall data."
+python plot.py o
+Write-Output "`tPlotting section data."
+python plot.py s
 
-    ./list_all_files
-}
+./list_all_files
 
 if ($plot_wide -eq "y") {
     # First, deal with undergrad data
@@ -110,13 +108,12 @@ $plot_time = $sw.Elapsed.TotalMinutes
 # =============================================================== #
 $sw.Restart()
 $base_msg = "%B %d, %Y - update (plot, automated)"
-$term_msg = "Terms Updated: $terms_processed"
 $dur_msg = "Took: $([Math]::Round($plot_time, 4)) minutes to plot ($plot_wide)."
 
 # commit
 Write-Output "`tCommitting changes."
 git add .
-git commit -m (Get-Date -UFormat $base_msg) -m $term_msg -m $dur_msg
+git commit -m (Get-Date -UFormat $base_msg) -m $dur_msg
 git push
 
 $sw.Stop()
