@@ -1,0 +1,70 @@
+{
+    # A marker is simply a vertical line.
+    "markers": [
+        {
+            # The date that this event starts, in the format YYYY-MM-DD.
+            'd': '2022-02-12',
+
+            # The hour (24hr format) in which this event starts. For example,
+            # priorities can usually start enrolling at 8am, so you would put
+            # 8.
+            't': 8,
+
+            # The style of the vertical line.
+            # See https://matplotlib.org/3.5.0/gallery/lines_bars_and_markers/linestyles.html.
+            'l': 'dotted',
+
+            # The color of the vertical line.
+            # See https://matplotlib.org/3.5.0/tutorials/colors/colors.html.
+            'c': '#e06d34',
+
+            # The name of this vertical line.
+            # This will be shown in the legend.
+            'n': 'Priorities Start',
+
+            # The ID for this marker. This should be unique!
+            'i': 1,
+
+            # Whether to hide this from the plot legends. This is useful if you know
+            # you will have duplicate names. NOTE: if this prop exists at all, then
+            # the line will be hidden. If it doesn't exist, then it will not be hidden.
+            'h': True
+        },
+    ],
+    # A region is simply a shaded area between two markers (denoted by their IDs, 
+    # or 'i' properties).
+    "regions": [
+        {
+            # The ID of the marker that this region starts at.
+            's': 1,
+            # The ID of the marker that this region ends at.
+            'e': 2,
+            # The name of the region.
+            'n': 'Region 1',
+            # The color of the region.
+            'c': '#e06d34',
+            # Whether to hide this from the plot legends. This is useful if you know
+            # you will have duplicate names. NOTE: if this prop exists at all, then
+            # the line will be hidden. If it doesn't exist, then it will not be hidden.
+            'h': True
+        }
+    ],
+    "settings": {
+        # The name of this term. For example, "Spring 2022" is an example.
+        "termName": "Name of Term",
+
+        # Whether to *also* plot the total number of seats (alongside
+        # enrolled/available and waitlisted count).
+        "showTotal": True,
+
+        # Whether to plot the number of students enrolled (True) or the number
+        # of free seats (False). For Spring 2022, use `False`.
+        "useEnrolledTtl": False,
+
+        # Whether to show any of the "markers" (the vertical lines denoting an
+        # event). If this is False, then the markers array will not be used.
+        "useMarkers": True,
+    },
+    # The plotconfig.py version. Use version 2 here.
+    "version": 2
+}
