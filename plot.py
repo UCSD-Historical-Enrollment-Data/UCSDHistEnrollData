@@ -289,13 +289,7 @@ def process_overall(num: int, files: List[str], from_folder: str, out_folder: st
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        print("Usage: plot.py <base folder> <'s', 'o', 'sw', 'ow', 'sfsp', 'ofsp'>")
-        sys.exit(1)
-
-    # Get the cleaned folder
-    base_folder = sys.argv[-2]
-    if not exists(base_folder):
-        print(f"Folder '{base_folder}' does not exist")
+        print("Usage: plot.py <'s', 'o', 'sw', 'ow', 'sfsp', 'ofsp'>")
         sys.exit(1)
 
     # Get the type of data to process
@@ -312,10 +306,10 @@ if __name__ == '__main__':
 
     # Get config file
     try:
-        with open(f'{base_folder}/plotconfig.txt', 'r') as f:
+        with open('plotconfig.txt', 'r') as f:
             config = eval(f.read())
     except:
-        print(f'{base_folder} does not contain a plotconfig.txt file. Please set one up and then try again.')
+        print(f'This folder does not contain a plotconfig.txt file. Please set one up and then try again.')
         exit(1)
 
     chunk_size = CHUNK_SIZE
@@ -331,11 +325,11 @@ if __name__ == '__main__':
         print(f"First/second-pass plots are only supported for v1 of the config file.")
         exit(1)
 
-    plot_folder = join(base_folder, settings_obj['overall_plot_folder'] if dt in ['o', 'ow', 'ofsp'] else settings_obj['section_plot_folder'])
+    plot_folder = join(settings_obj['overall_plot_folder'] if dt in ['o', 'ow', 'ofsp'] else settings_obj['section_plot_folder'])
     if not exists(plot_folder):
         mkdir(plot_folder)
 
-    in_folder = join(base_folder, OVERALL_FOLDER if dt in ['o', 'ow', 'ofsp'] else SECTION_FOLDER)
+    in_folder = join(OVERALL_FOLDER if dt in ['o', 'ow', 'ofsp'] else SECTION_FOLDER)
     all_files = listdir(in_folder)
 
     # If we're working with sections, we only want the files that appear more than once

@@ -52,49 +52,40 @@ if ($plot_wide -eq "y") {
     Write-Host "Acknowledged: will create wide plots for data."
 }
 
-# check if UCSDHistEnrollData folder exists
+# check if the term folder exists
 # If it does, pull from repo for latest updates.
 # Otherwise, clone
-if (Test-Path -Path "UCSDHistEnrollData") {
-    Set-Location UCSDHistEnrollData
+if (Test-Path -Path $term) {
+    Set-Location $term
     git pull
 }
 else {
     Write-Output "`tCloning..."
-    git clone https://github.com/ewang2002/UCSDHistEnrollData
-    Set-Location UCSDHistEnrollData
+    git clone "https://github.com/ewang2002/UCSDHistEnrollData/$term"
+    Set-Location $term
 }
 
 $sw = [Diagnostics.Stopwatch]::StartNew()
-# Separate all Winter data if possible
-if (Test-Path "separate_grad_courses.exe") {
-    ./separate_grad_courses.exe _holding WI23 WI23G
-    Write-Output "Separated Winter enrollment data successfully."
-}
-else {
-    Write-Host "[warn] No separate_grad_courses.exe found!"
-}
-
 foreach ($term in $terms) {
     Write-Output "================== Processing $term. =================="
     Write-Output "`tCleaning raw CSVs."
-    python clean_raw_csvs.py $term
+    python clean_raw_csvs.py
 
     Write-Output "`tCategorizing enroll data."
     python enroll_data_cleaner.py $term
 
     Write-Output "`tPlotting overall data."
-    python plot.py $term o
+    python plot.py o
     Write-Output "`tPlotting section data."
-    python plot.py $term s
+    python plot.py s
 
-    ./list_all_files $term
+    ./list_all_files
 }
 
 if ($plot_wide -eq "y") {
     # First, deal with undergrad data
-    $overall_wide_folder = "WI23/plot_overall_wide"
-    $section_wide_folder = "WI23/plot_section_wide"
+    $overall_wide_folder = "plot_overall_wide"
+    $section_wide_folder = "plot_section_wide"
 
     if (!(Test-Path $overall_wide_folder)) {
         New-Item -ItemType "directory" -Path $overall_wide_folder
@@ -106,26 +97,9 @@ if ($plot_wide -eq "y") {
 
     # plot it
     Write-Output "`tPlotting WI23 overall data (wide)."
-    python plot.py WI23 ow
+    python plot.py ow
     Write-Output "`tPlotting WI23 section data (wide)."
-    python plot.py WI23 sw
-
-    # Finally, deal with grad data
-    $grad_overall_wide_folder = "WI23G/plot_overall_wide"
-    $grad_section_wide_folder = "WI23G/plot_section_wide"
-
-    if (!(Test-Path $grad_overall_wide_folder)) {
-        New-Item -ItemType "directory" -Path $grad_overall_wide_folder
-    }
-    
-    if (!(Test-Path $grad_section_wide_folder)) {
-        New-Item -ItemType "directory" -Path $grad_section_wide_folder
-    }
-
-    Write-Output "`tPlotting WI23G overall data (wide)."
-    python plot.py WI23G ow
-    Write-Output "`tPlotting WI23G section data (wide)."
-    python plot.py WI23G sw
+    python plot.py sw
 }
 
 $sw.Stop()

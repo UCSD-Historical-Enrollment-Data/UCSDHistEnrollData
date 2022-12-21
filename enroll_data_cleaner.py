@@ -16,17 +16,7 @@ CLEANED_FOLDER = 'cleaned'
 OUT_SEC_FOLDER = 'section'
 OUT_OVERALL_FOLDER = 'overall'
 
-if len(sys.argv) != 2:
-    print("Usage: enroll_data_cleaner.py <base folder>")
-    sys.exit(1)
-
-# Get the cleaned folder
-base_folder = sys.argv[-1]
-if not exists(base_folder):
-    print(f"Folder '{base_folder}' does not exist")
-    sys.exit(1)
-
-cleaned_folder = join(base_folder, CLEANED_FOLDER)
+cleaned_folder = CLEANED_FOLDER
 
 # Key = subject + course code (e.g. CSE 100)
 # Value = Dictionary where key = section code (e.g. A or 001)
@@ -50,13 +40,7 @@ with open(join(cleaned_folder, 'enrollment.csv'), "r") as f:
         waitlisted = int(line[6])
         total = int(line[7])
         
-        # SP22 data is kind of scuffed, so we manually calculate 
-        # the total enrolled. This will NOT be accurate, but is
-        # better than nothing
-        if base_folder == 'SP22':
-            enrolled = total - available_seats
-        else:
-            enrolled = int(line[8])
+        enrolled = int(line[8])
 
         if subj_course not in data_by_sec:
             data_by_sec[subj_course] = {}
@@ -87,7 +71,7 @@ with open(join(cleaned_folder, 'enrollment.csv'), "r") as f:
 
 # save overall data into the appropriate folder
 for subj_code in data_by_overall:
-    with open(join(base_folder, OUT_OVERALL_FOLDER, f'{subj_code}.csv'), 'w') as f:
+    with open(join(OUT_OVERALL_FOLDER, f'{subj_code}.csv'), 'w') as f:
         f.write(
             'time,enrolled,available,waitlisted,total\n')
         for raw_time in data_by_overall[subj_code]:
@@ -106,7 +90,7 @@ for subj_code in data_by_sec:
         continue 
     
     for sec_code in data_by_sec[subj_code]:
-        with open(join(base_folder, OUT_SEC_FOLDER, f'{subj_code}_{sec_code}.csv'), 'w') as f:
+        with open(join(OUT_SEC_FOLDER, f'{subj_code}_{sec_code}.csv'), 'w') as f:
             f.write(
             'time,enrolled,available,waitlisted,total\n')
             for raw_time in data_by_sec[subj_code][sec_code]:
