@@ -1,32 +1,36 @@
 use std::{
     env,
     fs::{self, OpenOptions},
-    io::{Error, Write},
+    io::Write,
     path::Path,
+    process::ExitCode,
 };
 
-fn main() -> Result<(), Error> {
+fn main() -> anyhow::Result<ExitCode> {
     let args = env::args().collect::<Vec<_>>();
-    if args.len() != 4 {
-        println!("Usage: ./separate_grad_courses <base folder> <ug folder> <g folder>");
-        return Ok(());
+    if args.len() != 3 {
+        println!("Usage: ./separate_grad_courses <ug name> <g name>");
+        return Ok(ExitCode::FAILURE);
     }
 
-    let base_folder = &args[args.len() - 3];
-    let ug_folder = &args[args.len() - 2];
-    let g_folder = &args[args.len() - 1];
+    let ug_term = &args[args.len() - 2];
+    let g_term = &args[args.len() - 1];
 
-    if base_folder == ug_folder || base_folder == g_folder {
-        println!("base_folder and ug/g_folder must be different.");
-        return Ok(());
+    if ug_term == g_term {
+        println!("the base term and ug/g term must be different.");
+        return Ok(ExitCode::FAILURE);
     }
 
-    let base_raw_path = Path::new(base_folder);
-    let ug_raw_path = Path::new(ug_folder).join("raw");
-    let g_raw_path = Path::new(g_folder).join("raw");
+    // Idea: this executable should be run in the directory containing a folder called
+    // "holding"; this folder will contain all CSV files that need to be split. Split
+    // files will be put in a folder called "split" which is also located in the same
+    // place as the executable.
+
+    let import_path = Path::new("holding");
+    let export_path = Path::new("split");
 
     // Separate all grad/undergrad courses into two files.
-    for f in fs::read_dir(&base_raw_path)? {
+    for f in fs::read_dir(import_path)? {
         let f = f?;
         let f_name = f.file_name();
         let f_type = f.file_type()?;
@@ -39,21 +43,24 @@ fn main() -> Result<(), Error> {
             None => continue,
         };
 
-        if f_name.ends_with("_fixed.csv") || f_name.ends_with(".md") {
+        if !f_name.ends_with(".csv") || f_name.ends_with("_fixed.csv") {
             continue;
         }
 
         let base_name = get_base_name(f_name);
-        let new_ug_name = format!("{}_{}.csv", base_name, ug_folder);
-        let new_g_name = format!("{}_{}.csv", base_name, g_folder);
+        let new_ug_name = format!("{}_{}.csv", base_name, ug_term);
+        let new_g_name = format!("{}_{}.csv", base_name, g_term);
 
-        let new_ug_file = ug_raw_path.join(new_ug_name);
-        let new_g_file = g_raw_path.join(new_g_name);
+        let new_ug_file = export_path.join(new_ug_name);
+        let new_g_file = export_path.join(new_g_name);
 
         println!("Processing: {}", f_name);
 
         let content = fs::read_to_string(f.path())?;
-        let csv_header = content.lines().next().unwrap();
+        let csv_header = match content.lines().next() {
+            Some(s) => s,
+            None => continue,
+        };
 
         let mut undergrad_data = String::new();
         undergrad_data.push_str(csv_header);
@@ -98,19 +105,16 @@ fn main() -> Result<(), Error> {
     }
 
     // Clean up all processed CSV files
-    for f in fs::read_dir(&base_raw_path)? {
-        let f = f?;
-        match f.path().extension() {
-            Some(s) => {
-                if s.to_ascii_lowercase() != "md" {
-                    fs::remove_file(f.path())?;
-                }
+    for f in fs::read_dir(import_path)? {
+        let path = f?.path();
+        if let Some(s) = path.extension() {
+            if s.to_ascii_lowercase() != "md" {
+                fs::remove_file(path)?;
             }
-            None => {}
         }
     }
 
-    Ok(())
+    Ok(ExitCode::SUCCESS)
 }
 
 fn get_course_num(subj_num: &str) -> u32 {
@@ -119,7 +123,7 @@ fn get_course_num(subj_num: &str) -> u32 {
         .nth(1)
         .unwrap()
         .chars()
-        .filter(|x| x.is_digit(10))
+        .filter(|x| x.is_ascii_digit())
         .map(|x| x.to_digit(10).unwrap())
         .fold(0, |acc, elem| acc * 10 + elem)
 }

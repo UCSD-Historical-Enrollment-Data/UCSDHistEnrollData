@@ -1,0 +1,9 @@
+# This .gitignore is for data repositories only.
+
+__pycache__/
+.idea/
+enrollment.csv
+
+# Exclude all scripts
+*.py
+*.ps1

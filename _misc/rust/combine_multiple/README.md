@@ -1,3 +1,6 @@
+# Note
+Due to restructuring, this project is no longer in use.
+
 # CombineMultiple
 This program combines all [*real cleaned/processed CSV files*](https://github.com/ewang2002/UCSDHistEnrollData#types-of-csv-files) for each course from multiple terms into *one* cleaned/processed CSV file.
 

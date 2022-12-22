@@ -1,5 +1,5 @@
 $res = ""
-$files = Get-ChildItem -Path "$overall" -Recurse
+$files = Get-ChildItem -Path "overall" -Recurse
 foreach ($file in $files) {
     if ( $file.Extension -ne ".csv" ) {
         continue
