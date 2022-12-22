@@ -1,6 +1,6 @@
 __pycache__/
 .idea/
-_misc/rust/*/target/*
+misc/rust/*/target/*
 
 *.exe
 !misc/executables/*.exe

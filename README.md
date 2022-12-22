@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/ewang2002/UCSDHistEnrollData/blob/master/_misc/assets/project_banner.png?raw=true"  alt="Project Banner"/>
+  <img src="https://github.com/ewang2002/UCSDHistEnrollData/blob/master/misc/assets/project_banner.png?raw=true"  alt="Project Banner"/>
 </p>
 
 <p align="center">
@@ -232,12 +232,12 @@ As you may have noticed, you're supposed to run the scripts in the order that th
 That said, there are also several general scripts designed to streamline this process.
 | Script | Purpose |
 | ------ | ------- |
-| `run.sh` | A Bash script that runs both `clean_raw_csvs.py` and `enroll_data_cleaner.py`. **This is no longer maintained and is now located in the `_misc/old_scripts` folder.** |
-| `multplot.sh` | A Bash script that runs all three Python scripts above for each active terms. **This is no longer maintained and is now located in the `_misc/old_scripts` folder.** |
+| `run.sh` | A Bash script that runs both `clean_raw_csvs.py` and `enroll_data_cleaner.py`. **This is no longer maintained and is now located in the `misc/old_scripts` folder.** |
+| `multplot.sh` | A Bash script that runs all three Python scripts above for each active terms. **This is no longer maintained and is now located in the `misc/old_scripts` folder.** |
 | `multplot.ps1` | A Powershell script that runs all three Python scripts above for each active terms. It also automatically pulls or clones and pushes the changes to GitHub. |
 
 ## Children Repository Structure
-This repository is structured so that data for a term is put into its corresponding term folder. As such, all of the folders (except `_misc` and `_holding`) are term folders (e.g., `FA22G` is a term folder as it contains graduate enrollment data for the Fall 2022 quarter).
+This repository is structured so that data for a term is put into its corresponding term folder. As such, all of the folders (except `misc` and `_holding`) are term folders (e.g., `FA22G` is a term folder as it contains graduate enrollment data for the Fall 2022 quarter).
 
 Within each term folder are the following folders and files:
 | Name | Type | Purpose |
@@ -248,14 +248,14 @@ Within each term folder are the following folders and files:
 | `section` | Folder |  A folder containing one CSV file per *section* (e.g. CSE 8A with 2 sections `A` and `B` would be put in two files called `CSE 8A_A.csv` and `CSE 8A_B.csv`). |
 | `plot_overall` | Folder |  A folder containing all of the graphs, where each graph was created using the data points from the CSV files found in the `overall` folder. |
 | `plot_section` | Folder |  A folder containing all of the graphs, where each graph was created using the data points from the CSV files found in the `section` folder. |
-| `plotconfig.txt` | File | A configuration file that lets you configure a few things regarding how the graphs should look. To see an example configuration file, click [here](https://github.com/ewang2002/UCSDHistEnrollData/blob/master/_misc/config_examples/plotconfig2.txt). |
+| `plotconfig.txt` | File | A configuration file that lets you configure a few things regarding how the graphs should look. To see an example configuration file, click [here](https://github.com/ewang2002/UCSDHistEnrollData/blob/master/misc/config_examples/plotconfig2.txt). |
 
 Creation of a new term folder can be done using the `create_new_folder.py` script.
 
 ### `plotconfig.txt` Configuration File
 As implied, every term folder *must have* a `plotconfig.txt` file; this gives the `plot.py` script the configuration information needed to run properly. 
 
-In the `_misc/config_examples` directory of this project, there are two example files you can pick from.
+In the `misc/config_examples` directory of this project, there are two example files you can pick from.
 
 | File | Information |
 | ---- | ----------- |
@@ -296,7 +296,7 @@ These instructions are not comprehensive, nor were they meant to be; thus, if yo
 Several things inspired me to work on this project. 
 - As a mathematics-computer science student, I'm given zero priority when it comes to enrolling in 90% of upper-division computer science courses. I can only enroll >3 weeks after all CSE majors have enrolled, which puts me at a significant disadvantage. Thus, I wanted to see what classes I had a *chance* at enrolling in so I can improve my four-year plan.
 - UCSD's Computer Science and Engineering Department wasn't helpful in giving me information on how fast classes I wanted to take filled up (as seen in the screenshot below), so I decided to collect this information myself.
-<img src="https://github.com/ewang2002/UCSDHistEnrollData/blob/master/_misc/assets/thanks_cse.png?raw=true"  alt="Thanks CSE Department for being helpful as always."/>
+<img src="https://github.com/ewang2002/UCSDHistEnrollData/blob/master/misc/assets/thanks_cse.png?raw=true"  alt="Thanks CSE Department for being helpful as always."/>
 
 - I took [COGS 108: Data Science in Practice](https://github.com/COGS108) with [Professor Jason Fleischer](https://jgfleischer.com/) and learned a lot of things that I wanted to apply, so this project was a good place to start.
 - And, of course, I wanted an excuse to learn the Rust programming language. 
