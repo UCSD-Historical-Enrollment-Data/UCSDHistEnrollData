@@ -288,7 +288,7 @@ def process_overall(num: int, files: List[str], from_folder: str, out_folder: st
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 3:
+    if len(sys.argv) != 2:
         print("Usage: plot.py <'s', 'o', 'sw', 'ow', 'sfsp', 'ofsp'>")
         sys.exit(1)
 
