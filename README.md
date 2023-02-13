@@ -31,6 +31,7 @@ The following repositories only contain _limited_ data, and were intended to be 
 Starting with FA22, 
 - enrollment and drop data will be integrated into one term folder. 
 - graduate courses from specific departments will be collected[^1].
+- all undergraduate courses will be collected.
 
 | Term | Information | Data Collected | Link |
 | ---- | ----------- | -------------- | ---- |
