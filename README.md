@@ -13,6 +13,7 @@ A repository that branches out to multiple children repositories containing enro
 ## Data
 The following are terms that I've been collecting data for, along with links to their corresponding repositories.
 
+To see how often the data is being updated, click [here](https://github.com/ewang2002/UCSDHistEnrollData/issues/1).
 
 ### Limited Data
 The following repositories only contain _limited_ data, and were intended to be long-term test runs to see if the project was feasible. Note that Spring 2022 enrollment data is formatted differently from the data found in other data repositories.
@@ -39,8 +40,7 @@ Starting with FA22,
 | FA22G | Fall 2022 Enrollment & Drop Data (Graduate Only) | CSE, COGS, MATH, ECE graduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2022FallGrad) |
 | WI23 | Winter 2023 Enrollment & Drop Data (Undergraduate Only) | All undergraduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2023Winter) |
 | WI23G | Winter 2023 Enrollment & Drop Data (Graduate Only) | CSE, COGS, MATH, ECE graduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2023WinterGrad) |
-| SP23 | Spring 2023 Enrollment & Drop Data (Undergraduate Only) | All undergraduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2023Spring) |
-| SP23G | Spring 2023 Enrollment & Drop Data (Graduate Only) | CSE, COGS, MATH, ECE graduate | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2023SpringGrad) |
+| SP23 | Spring 2023 Enrollment & Drop Data | All undergraduate courses & CSE, COGS, MATH, ECE graduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2023Spring) |
 
 
 ## Content
