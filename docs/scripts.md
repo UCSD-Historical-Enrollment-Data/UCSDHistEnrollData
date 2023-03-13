@@ -1,7 +1,7 @@
 [← Go Back](https://github.com/ewang2002/UCSDHistEnrollData)
 
 # Script Information
-Whenever I'm processing the raw CSV files, I have the following scripts (and their applicable dependencies) in the root directory of the data repository. You can find all of these scripts in the root directory of *this* repository. 
+Whenever I'm processing the raw CSV files, I have the following scripts (and their applicable dependencies) in the root directory of the data repository. You can find all of these scripts in the `scripts` directory of *this* repository. 
 
 | Script | Purpose | Dependencies |
 | ------ | ------- | ------------ |
