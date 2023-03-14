@@ -8,12 +8,14 @@
   <b>UCSDHistEnrollmentData</b>
 </p>
 
-A repository that branches out to multiple children repositories containing enrollment data for multiple terms at UC San Diego.
+A repository that 
+- branches out to multiple children repositories containing enrollment data for multiple terms at UC San Diego.
+- contains some other other UCSD-related [data files](https://github.com/ewang2002/UCSDHistEnrollData/tree/master/data) that may be helpful.
 
 ## Data
-The following are terms that I've been collecting data for, along with links to their corresponding repositories.
+You can find historical enrollment data linked below. Documentation can be found further below. To see how often the data is being updated, click [here](https://github.com/ewang2002/UCSDHistEnrollData/issues/1).
 
-To see how often the data is being updated, click [here](https://github.com/ewang2002/UCSDHistEnrollData/issues/1).
+To see the other UCSD-related data files, go to the [`data`](https://github.com/ewang2002/UCSDHistEnrollData/tree/master/data) folder.
 
 ### Limited Data
 The following repositories only contain _limited_ data, and were intended to be long-term test runs to see if the project was feasible. Note that Spring 2022 enrollment data is formatted differently from the data found in other data repositories.
@@ -42,9 +44,9 @@ Starting with FA22,
 | WI23G | Winter 2023 Enrollment & Drop Data (Graduate Only) | CSE, COGS, MATH, ECE graduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2023WinterGrad) |
 | SP23 | Spring 2023 Enrollment & Drop Data | All undergraduate courses & CSE, COGS, MATH, ECE graduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2023Spring) |
 
+> **Note**:
+> **This** repository simply contains a bunch of random scripts to help me clean up and process the enrollment data, documentation regarding how the CSV files are structured, and links to the sibling repositories. **Each sibling repository** contains CSV files which contains information regarding the number of seats available at some time for certain classes. There are also some scripts designed to help clean and analyze the data. Additionally, there are pre-generated plots of each course that is being tracked.
 
-## Content
-**This** repository simply contains a bunch of random scripts to help me clean up and process the enrollment data, documentation regarding how the CSV files are structured, and links to the sibling repositories. **Each sibling repository** contains CSV files which contains information regarding the number of seats available at some time for certain classes. There are also some scripts designed to help clean and analyze the data. Additionally, there are pre-generated plots of each course that is being tracked.
 
 ## Documentation
 Below, you can find some documentation to get you started.

@@ -4,3 +4,5 @@ misc/rust/*/target/*
 
 *.exe
 !misc/executables/*.exe
+
+CAPES.tsv
