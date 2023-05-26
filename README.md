@@ -17,7 +17,10 @@ You can find historical enrollment data linked below. Documentation can be found
 
 To see the other UCSD-related data files, go to the [`data`](https://github.com/ewang2002/UCSDHistEnrollData/tree/master/data) folder.
 
-### Limited Data
+> **Note**:
+> **This** repository simply contains a bunch of random scripts to help me clean up and process the enrollment data, documentation regarding how the CSV files are structured, and links to the sibling repositories. **Each sibling repository** contains CSV files which contains information regarding the number of seats available at some time for certain classes. There are also some scripts designed to help clean and analyze the data. Additionally, there are pre-generated plots of each course that is being tracked.
+
+### Limited Data (Prior to FA22)
 The following repositories only contain _limited_ data, and were intended to be long-term test runs to see if the project was feasible. Note that Spring 2022 enrollment data is formatted differently from the data found in other data repositories.
 
 | Term | Information | Data Collected | Link |
@@ -43,11 +46,15 @@ Starting with FA22,
 | WI23 | Winter 2023 Enrollment & Drop Data (Undergraduate Only) | All undergraduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2023Winter) |
 | WI23G | Winter 2023 Enrollment & Drop Data (Graduate Only) | CSE, COGS, MATH, ECE graduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2023WinterGrad) |
 | SP23 | Spring 2023 Enrollment & Drop Data | All undergraduate courses & CSE, COGS, MATH, ECE graduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2023Spring) |
+| FA23 | Fall 2023 Enrollment & Drop Data | All undergraduate courses & CSE, COGS, MATH, ECE graduate courses | Soon. |
+
+### Incomplete Data (Starting FA22)
+Below, you can find incomplete data. Incomplete data is defined as data with a significant number of missing datapoints (essentially rendering them significantly less valuable than regular datasets).
+
+| Term | Information | Data Collected | Link |
+| ---- | ----------- | -------------- | ---- |
 | S123 | Summer I 2023 Raw Data | All undergraduate courses (raw data only, see repository for more info) | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2023Summer1) |
 | S223 | Summer II 2023 Raw Data | All undergraduate courses (raw data only, see repository for more info) | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2023Summer2) |
-
-> **Note**:
-> **This** repository simply contains a bunch of random scripts to help me clean up and process the enrollment data, documentation regarding how the CSV files are structured, and links to the sibling repositories. **Each sibling repository** contains CSV files which contains information regarding the number of seats available at some time for certain classes. There are also some scripts designed to help clean and analyze the data. Additionally, there are pre-generated plots of each course that is being tracked.
 
 
 ## Documentation
@@ -62,7 +69,7 @@ Below, you can find some documentation to get you started.
 ## License
 All files here and in the data repositories are licensed under the MIT license. If you'd like an explicit LICENSE file in the data repositories, please let me know.
 
-You're absolutely free to use this data for your own projects; perhaps, someone can make the next [Berkeleytime](https://berkeleytime.com/). **Please be sure to cite this repository when using data found here so other people can use the data for their own projects.**
+You're free to use this data for your own projects; perhaps, someone can make the next [Berkeleytime](https://berkeleytime.com/). **Please be sure to cite this repository when using data found here so other people can use the data for their own projects.**
 
 
 [^1]: Graduate courses are not formally supported. Once I stop collecting undergraduate course enrollment data, I will also stop collecting graduate course enrollment data, which means some data (e.g., drop with W deadline) will not be collected.
