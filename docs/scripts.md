@@ -9,6 +9,7 @@ Whenever I'm processing the raw CSV files, I have the following scripts (and the
 | `enroll_data_cleaner.py` | A Python script that takes one term folder and "cleans" the data by breaking the `enrollment.csv` file into class or section CSV files and putting those CSV files in the `overall` or `section` folders. | |
 | `plot.py` | A Python script that takes one term folder and, using the cleaned data in said folder, creates graphs for each CSV file in the `overall` and `section` folders. | `pandas` <br> `matplotlib` <br> `seaborn` |
 | `list_all_files.ps1` | A PowerShell script that simply puts all the courses and sections that I have data for in a text file. | |
+| `generate_toc.py` | A Python script that generates a Markdown file containing links to all CSV and graph files. This is a workaround for the limitation on GitHub where GitHub only displays 1000 files. | |
 
 There are also several general scripts designed to streamline this process.
 | Script | Purpose |

@@ -104,6 +104,7 @@ if ($plot_wide -eq "y") {
     python plot.py sw
 }
 
+python generate_toc.py
 $sw.Stop()
 $plot_time = $sw.Elapsed.TotalMinutes
 
