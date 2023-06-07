@@ -9,7 +9,7 @@ foreach ($file in $files) {
 }
 
 $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding $False
-[System.IO.File]::WriteAllLines("all_courses.txt", $res, $Utf8NoBomEncoding)
+[System.IO.File]::WriteAllLines("$pwd\\all_courses.txt", $res, $Utf8NoBomEncoding)
 
 # =============================================================== #
 
@@ -23,4 +23,4 @@ foreach ($file in $files) {
     $res += $file.Name.Replace(".csv", "") + "`n"
 }
 
-[System.IO.File]::WriteAllLines("all_sections.txt", $res, $Utf8NoBomEncoding)
+[System.IO.File]::WriteAllLines("$pwd\\all_sections.txt", $res, $Utf8NoBomEncoding)
