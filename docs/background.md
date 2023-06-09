@@ -19,6 +19,8 @@ Several things inspired me to work on this project.
 - UCSD's Computer Science and Engineering Department wasn't helpful in giving me information on how fast classes I wanted to take filled up (as seen in the screenshot below), so I decided to collect this information myself.
 <img src="https://github.com/ewang2002/UCSDHistEnrollData/blob/master/misc/assets/thanks_cse.png?raw=true"  alt="Thanks CSE Department for being helpful as always."/>
 
+  I do want to point out that, while the person who said this is technically correct, it's also true that, _generally speaking_, "the outcome of any waitlist or course enrollment" is generally _consistent_ enough that you can make some predictions. A lot of classes that I've been tracking in Fall 2023 have somewhat similar enrollment graphs to their Fall 2022 counterparts. 
+
 - I took [COGS 108: Data Science in Practice](https://github.com/COGS108) with [Professor Jason Fleischer](https://jgfleischer.com/) and learned a lot of things that I wanted to apply, so this project was a good place to start.
 - And, of course, I wanted an excuse to learn the Rust programming language. 
 
@@ -32,7 +34,7 @@ This repository was created on either February or March 2022. In any case, befor
   
   It should come as no surprise to anyone that $$1 \text{ GB} < 5 \text{ GB} \lll 33.6 \text{ GB}.$$
 
-Therefore, it was decided that
+Therefore, I decided that
 - all data files in _this_ repository would be moved into their own repositories, and
 - all history in this repository would be deleted (so that the repository's storage would be significantly less).
 
