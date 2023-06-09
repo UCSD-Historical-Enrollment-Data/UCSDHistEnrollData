@@ -82,8 +82,7 @@ python plot.py o
 Write-Output "`tPlotting section data."
 python plot.py s
 
-./list_all_files
-
+python list_files.py
 if ($plot_wide -eq "y") {
     # First, deal with undergrad data
     $overall_wide_folder = "plot_overall_wide"
