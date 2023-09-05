@@ -20,22 +20,9 @@ To see the other UCSD-related data files, go to the [`data`](https://github.com/
 > **Note**:
 > **This** repository simply contains a bunch of random scripts to help me clean up and process the enrollment data, documentation regarding how the CSV files are structured, and links to the sibling repositories. **Each sibling repository** contains CSV files which contains information regarding the number of seats available at some time for certain classes. There are also some scripts designed to help clean and analyze the data. Additionally, there are pre-generated plots of each course that is being tracked.
 
-### Limited Data (Prior to FA22)
-The following repositories only contain _limited_ data, and were intended to be long-term test runs to see if the project was feasible. Note that Spring 2022 enrollment data is formatted differently from the data found in other data repositories.
-
-| Term | Information | Data Collected | Link |
-| ---- | ----------- | -------------- | ---- |
-| SP22 | Spring 2022 Enrollment Data | CSE, COGS, MATH, ECE undergraduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2022Spring) |
-| SP22D | Spring 2022 Drop Data | CSE, COGS, MATH, ECE undergraduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2022SpringDrop) |
-| S122 | Summer I 2022 Enrollment Data | CSE, COGS, MATH, ECE undergraduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2022Summer1) |
-| S122D | Summer I 2022 Drop Data | CSE, COGS, MATH, ECE undergraduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2022Summer1Drop) |
-| S222 | Summer II 2022 Enrollment Data | CSE, COGS, MATH, ECE undergraduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2022Summer2) |
-| S222D | Summer II 2022 Drop Data | CSE, COGS, MATH, ECE undergraduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2022Summer2Drop) |
-| S322 | Summer III 2022 Data | CSE, COGS, MATH, ECE undergraduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2022Summer3) |
-
 ### Full Data
 Starting with FA22, 
-- enrollment and drop data will be integrated into one term folder. 
+- enrollment and drop data are integrated into one term folder. 
 - graduate courses from specific departments will be collected[^1].
 - all undergraduate courses will be collected.
 
@@ -48,13 +35,26 @@ Starting with FA22,
 | SP23 | Spring 2023 Enrollment & Drop Data | All undergraduate courses & CSE, COGS, MATH, ECE graduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2023Spring) |
 | FA23 | Fall 2023 Enrollment & Drop Data | All undergraduate courses & CSE, COGS, MATH, ECE graduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2023Fall) |
 
-### Incomplete Data (Starting FA22)
+### Incomplete Data 
 Below, you can find incomplete data. Incomplete data is defined as data with a significant number of missing datapoints (essentially rendering them significantly less valuable than regular datasets).
 
 | Term | Information | Data Collected | Link |
 | ---- | ----------- | -------------- | ---- |
 | S123 | Summer I 2023 Raw Data | All undergraduate courses (raw data only, see repository for more info) | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2023Summer1) |
 | S223 | Summer II 2023 Raw Data | All undergraduate courses (raw data only, see repository for more info) | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2023Summer2) |
+
+### Limited Data (Prior to FA22)
+The following repositories only contain _limited_ data, and were intended to be long-term test runs to see if the project was feasible. Note that Spring 2022 enrollment data is formatted differently from the data found in other data repositories.
+
+| Term | Information | Data Collected | Link |
+| ---- | ----------- | -------------- | ---- |
+| SP22 | Spring 2022 Enrollment Data | CSE, COGS, MATH, ECE undergraduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2022Spring) |
+| SP22D | Spring 2022 Drop Data | CSE, COGS, MATH, ECE undergraduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2022SpringDrop) |
+| S122 | Summer I 2022 Enrollment Data | CSE, COGS, MATH, ECE undergraduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2022Summer1) |
+| S122D | Summer I 2022 Drop Data | CSE, COGS, MATH, ECE undergraduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2022Summer1Drop) |
+| S222 | Summer II 2022 Enrollment Data | CSE, COGS, MATH, ECE undergraduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2022Summer2) |
+| S222D | Summer II 2022 Drop Data | CSE, COGS, MATH, ECE undergraduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2022Summer2Drop) |
+| S322 | Summer III 2022 Data | CSE, COGS, MATH, ECE undergraduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2022Summer3) |
 
 
 ## Documentation
