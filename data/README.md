@@ -1,5 +1,5 @@
 # Data Folder
-This repository contains TSV and CSV data files that are not necessarily related to enrollment history, but were created because I was able to get enrollment history.
+This repository contains TSV data files that are not necessarily related to enrollment history, but were created because I was able to get enrollment history.
 
 ## TSV Files & Structures
 Below, you'll find information on what each file represents, along with their structure.
