@@ -67,9 +67,11 @@ Below, you can find some documentation to get you started.
 
 
 ## License
-All files here and in the data repositories are licensed under the MIT license. If you'd like an explicit LICENSE file in the data repositories, please let me know.
+All files here and in the data repositories are licensed under the MIT license. If you'd like an explicit LICENSE file in the data repositories, please let me[^2] know.
 
 You're free to use this data for your own projects, but please be sure to cite this repository when using data found here so other people can use the data for their own projects.
 
 
 [^1]: Graduate courses are not formally supported. Once I stop collecting undergraduate course enrollment data, I will also stop collecting graduate course enrollment data, which means some data (e.g., drop with W deadline) will not be collected.
+
+[^2]: Edward is bad. 
