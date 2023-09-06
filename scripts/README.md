@@ -11,3 +11,6 @@ The following scripts are required for each data repository where plotting takes
 
 The following scripts are required for each data repository where committing CSV files takes place.
 - `gitdata.ps1`
+
+## In Progress
+Scripts in progress will be used for future projects, but should not be used now since they are in development. 
