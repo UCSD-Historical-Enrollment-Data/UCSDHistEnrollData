@@ -111,7 +111,7 @@ def plot_group(group_num: int, files_to_plot: List[str], \
 
         # Set the x-axis to be more readable (show once per day)
         loc = mdates.AutoDateLocator(interval_multiples=True)
-        loc.intervald[mdates.DAILY] = [max(floor(len(df) / settings['num_ticks']), 1)]
+        loc.intervald[mdates.DAILY] = [(datetime.now() - df['time'].min()).days // 30]
         plot.xaxis.set_major_locator(loc)
         plot.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
 
