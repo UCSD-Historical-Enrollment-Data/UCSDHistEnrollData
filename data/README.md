@@ -58,7 +58,7 @@ Here, there are three different types of meeting: a lecture (LE), final exam (FI
 To see an example of how you might parse this file, see this [TypeScript example](https://github.com/AWaffleInc/rubot/blob/dd42c7afcdf1b6ff451d29d3727e740f15e90f70/src/Data.ts#L76) and [corresponding types declaration](https://github.com/AWaffleInc/rubot/blob/dd42c7afcdf1b6ff451d29d3727e740f15e90f70/src/definitions/MiscInterfaces.ts#L20).
 
 ### CAPE TSV File
-> **Note**:
+> [!NOTE]
 > Because CAPE data is not public (you need a UCSD SSO/AD/Business account), the `CAPEs.tsv` file will not be made public. If you are interested in getting this file, please *email* me[^1] using your UCSD account. 
 
 The `CAPEs.tsv` file has basic information about each CAPE entry. In particular, what you see when you search up a professor or class will be what you see in this file. 
@@ -82,7 +82,7 @@ The file is structured as follows:
 To see an example of how you might parse this file, see this [TypeScript example](https://github.com/AWaffleInc/rubot/blob/dd42c7afcdf1b6ff451d29d3727e740f15e90f70/src/Data.ts#L172) and [corresponding types declaration](https://github.com/AWaffleInc/rubot/blob/dd42c7afcdf1b6ff451d29d3727e740f15e90f70/src/definitions/MiscInterfaces.ts#L6).
 
 ### Courses TSV File
-> **Warning**:
+> [!WARNING]
 > The scraped information is **not** guaranteed to be complete or accurate, so please use at your own risk. Additionally parsing may need to be done. 
 
 The `courses.tsv` file contains scraped information from each of the department's course catalog page. 
