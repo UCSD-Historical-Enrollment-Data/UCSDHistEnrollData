@@ -13,12 +13,10 @@ A repository that
 - contains some other other UCSD-related [data files](https://github.com/ewang2002/UCSDHistEnrollData/tree/master/data) that may be helpful.
 
 ## Data
-You can find historical enrollment data linked below. Documentation can be found further below. To see how often the data is being updated, click [here](https://github.com/ewang2002/UCSDHistEnrollData/issues/1). That being said, I try to update term data during first and second pass once a day (usually in the evening) and once every week or two during other times.
-
-To see the other UCSD-related data files, go to the [`data`](https://github.com/ewang2002/UCSDHistEnrollData/tree/master/data) folder.
+You can find historical enrollment data linked below. Documentation can be found further below. To see the other UCSD-related data files, go to the [`data`](https://github.com/ewang2002/UCSDHistEnrollData/tree/master/data) folder.
 
 > **Note**:
-> **This** repository simply contains a bunch of random scripts to help me clean up and process the enrollment data, documentation regarding how the CSV files are structured, and links to the sibling repositories. **Each sibling repository** contains CSV files which contains information regarding the number of seats available at some time for certain classes. There are also some scripts designed to help clean and analyze the data. Additionally, there are pre-generated plots of each course that is being tracked.
+> This specific repository simply contains a bunch of random scripts to help me clean up and process the enrollment data, documentation regarding how the CSV files are structured, and links to the sibling repositories. **Each child repository** contains CSV files which contains information regarding the number of seats available at some time for certain classes. There are also some scripts designed to help clean and analyze the data. Additionally, there are pre-generated plots of each course that is being tracked.
 
 ### Full Data
 Starting with FA22, 
