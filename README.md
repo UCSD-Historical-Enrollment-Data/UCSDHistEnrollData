@@ -15,8 +15,8 @@ A repository that
 ## Data
 You can find historical enrollment data linked below. Documentation can be found further below. To see the other UCSD-related data files, go to the [`data`](https://github.com/ewang2002/UCSDHistEnrollData/tree/master/data) folder.
 
-> **Note**:
-> This specific repository simply contains a bunch of random scripts to help me clean up and process the enrollment data, documentation regarding how the CSV files are structured, and links to the sibling repositories. **Each child repository** contains CSV files which contains information regarding the number of seats available at some time for certain classes. There are also some scripts designed to help clean and analyze the data. Additionally, there are pre-generated plots of each course that is being tracked.
+> [!NOTE]
+> This repository contains a number of random scripts to help me clean up and process the enrollment data, documentation regarding how the CSV files are structured, and links to the sibling repositories. **Each child repository** contains CSV files which contains information regarding the number of seats available at some time for certain classes. There are also some scripts designed to help clean and analyze the data. Additionally, there are pre-generated plots of each course that is being tracked.
 
 ### Full Data
 Starting with FA22, 
