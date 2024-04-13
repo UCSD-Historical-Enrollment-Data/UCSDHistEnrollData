@@ -34,6 +34,9 @@ Starting with FA22,
 | FA23 | Fall 2023 Enrollment | All undergraduate courses & CSE, COGS, MATH, ECE graduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2023Fall) |
 | WI24 | Winter 2024 Enrollment & Drop Data | All undergraduate courses & CSE, COGS, MATH, ECE graduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2024Winter) |
 | SP24 | Spring 2024 Enrollment & Drop Data | All undergraduate courses & CSE, COGS, MATH, ECE graduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2024Spring) |
+| S124 | Summer I 2024 Enrollment & Drop Data | All undergraduate courses & CSE, COGS, MATH, ECE graduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2024Summer1) |
+| S224 | Summer II 2024 Enrollment & Drop Data | All undergraduate courses & CSE, COGS, MATH, ECE graduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2024Summer2) |
+| S324 | Special Summer 2024 Enrollment & Drop Data | All undergraduate courses & CSE, COGS, MATH, ECE graduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2024Summer3) |
 
 ### Incomplete Data 
 Below, you can find incomplete data. Incomplete data is defined as data with a significant number of missing datapoints (essentially rendering them significantly less valuable than regular datasets).
