@@ -58,9 +58,6 @@ Here, there are three different types of meeting: a lecture (LE), final exam (FI
 To see an example of how you might parse this file, see this [TypeScript example](https://github.com/AWaffleInc/rubot/blob/dd42c7afcdf1b6ff451d29d3727e740f15e90f70/src/Data.ts#L76) and [corresponding types declaration](https://github.com/AWaffleInc/rubot/blob/dd42c7afcdf1b6ff451d29d3727e740f15e90f70/src/definitions/MiscInterfaces.ts#L20).
 
 ### CAPE TSV File
-> [!NOTE]
-> Because CAPE data is not public (you need a UCSD SSO/AD/Business account), the `CAPEs.tsv` file will not be made public. If you are interested in getting this file, please *email* me[^1] using your UCSD account. 
-
 The `CAPEs.tsv` file has basic information about each CAPE entry. In particular, what you see when you search up a professor or class will be what you see in this file. 
 
 The file is structured as follows:
@@ -81,6 +78,9 @@ The file is structured as follows:
 
 To see an example of how you might parse this file, see this [TypeScript example](https://github.com/AWaffleInc/rubot/blob/dd42c7afcdf1b6ff451d29d3727e740f15e90f70/src/Data.ts#L172) and [corresponding types declaration](https://github.com/AWaffleInc/rubot/blob/dd42c7afcdf1b6ff451d29d3727e740f15e90f70/src/definitions/MiscInterfaces.ts#L6).
 
+> [!NOTE]
+> I do not have data from SET, and I do not have plans to create a scraper to gather SET data. If you need this data, you'll need to find your own way to obtain it.
+
 ### Courses TSV File
 > [!WARNING]
 > The scraped information is **not** guaranteed to be complete or accurate, so please use at your own risk. Additionally parsing may need to be done. 
@@ -96,8 +96,3 @@ The `courses.tsv` file contains scraped information from each of the department'
 | `description`   | The course description. | Data science is multidisciplinary... |
 
 To see an example of how you might parse this file, see this [TypeScript example](https://github.com/AWaffleInc/rubot/blob/dd42c7afcdf1b6ff451d29d3727e740f15e90f70/src/Data.ts#L230) and [corresponding types declaration](https://github.com/AWaffleInc/rubot/blob/dd42c7afcdf1b6ff451d29d3727e740f15e90f70/src/definitions/MiscInterfaces.ts#L53).
-
-
-
-
-[^1]: See the "Contact Me" section of my [profile's](https://github.com/ewang2002) README page for my email.
