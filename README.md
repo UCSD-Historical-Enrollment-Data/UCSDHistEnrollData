@@ -70,7 +70,6 @@ Below, you can find some documentation to get you started.
 - [Scripts](https://github.com/ewang2002/UCSDHistEnrollData/blob/master/docs/scripts.md)
 - [Setup](https://github.com/ewang2002/UCSDHistEnrollData/blob/master/docs/setup.md)
 
-
 ## License
 All files here and in the data repositories are licensed under the MIT license. If you'd like an explicit LICENSE file in the data repositories, please let me[^2] know.
 
