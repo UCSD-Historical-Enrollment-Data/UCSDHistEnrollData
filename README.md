@@ -12,7 +12,21 @@ A repository that
 - branches out to multiple children repositories containing enrollment data for multiple terms at UC San Diego.
 - contains some other other UCSD-related [data files](https://github.com/ewang2002/UCSDHistEnrollData/tree/master/data) that may be helpful.
 
+## Table of Contents
+- [Table of Contents](#table-of-contents)
+- [Data](#data)
+  - [Full Data](#full-data)
+  - [Incomplete & Limited Data](#incomplete--limited-data)
+- [Documentation](#documentation)
+- [Third-Party Projects](#third-party-projects)
+- [Contacting Us](#contacting-us)
+- [License](#license)
+
+  
 ## Data
+> [!TIP]
+> If you just want to see some third-party projects that are using the data that we collect, see the [Third-Party Projects](#third-party-projects) section at the bottom.
+
 You can find historical enrollment data linked below. Documentation can be found further below. To see the other UCSD-related data files, go to the [`data`](https://github.com/ewang2002/UCSDHistEnrollData/tree/master/data) folder.
 
 > [!NOTE]
@@ -41,7 +55,12 @@ Starting with FA22,
 | WI25 | Winter 2025 Enrollment & Drop Data | All undergraduate courses & CSE, COGS, MATH, ECE graduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2025Winter) |
 | SP25 | Spring 2025 Enrollment & Drop Data | All undergraduate courses & CSE, COGS, MATH, ECE graduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2025Spring) |
 
-### Incomplete Data 
+### Incomplete & Limited Data 
+
+<details>
+<summary>Incomplete Data</summary>
+<br> 
+
 Below, you can find incomplete data. Incomplete data is defined as data with a significant number of missing datapoints (essentially rendering them significantly less valuable than regular datasets).
 
 | Term | Information | Data Collected | Link |
@@ -49,7 +68,12 @@ Below, you can find incomplete data. Incomplete data is defined as data with a s
 | S123 | Summer I 2023 Raw Data | All undergraduate courses (raw data only, see repository for more info) | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2023Summer1) |
 | S223 | Summer II 2023 Raw Data | All undergraduate courses (raw data only, see repository for more info) | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2023Summer2) |
 
-### Limited Data (Prior to FA22)
+</details>
+
+<details>
+<summary>Limited Data (Prior to FA22)</summary>
+<br> 
+
 The following repositories only contain _limited_ data, and were intended to be long-term test runs to see if the project was feasible. Note that Spring 2022 enrollment data is formatted differently from the data found in other data repositories.
 
 | Term | Information | Data Collected | Link |
@@ -62,6 +86,7 @@ The following repositories only contain _limited_ data, and were intended to be 
 | S222D | Summer II 2022 Drop Data | CSE, COGS, MATH, ECE undergraduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2022Summer2Drop) |
 | S322 | Summer III 2022 Data | CSE, COGS, MATH, ECE undergraduate courses | [Here](https://github.com/UCSD-Historical-Enrollment-Data/2022Summer3) |
 
+</details>
 
 ## Documentation
 Below, you can find some documentation to get you started.
@@ -71,11 +96,34 @@ Below, you can find some documentation to get you started.
 - [Scripts](https://github.com/ewang2002/UCSDHistEnrollData/blob/master/docs/scripts.md)
 - [Setup](https://github.com/ewang2002/UCSDHistEnrollData/blob/master/docs/setup.md)
 
+
+## Third-Party Projects
+Below are a list of **third-party websites** using our data in some way.
+
+| Website | Features |
+| ------- | -------- |
+| [UC San Diego Course Registration Trend](https://www.ucsdregistration.com/) | A website that can display enrollment trends of multiple courses across different terms in one graph. See this [Reddit post](https://www.reddit.com/r/UCSD/comments/1gjuo36/i_made_a_website_to_help_make_course_registration/) for a synopsis of this website. |
+
+Keep in mind that the maintainers of this project (`UCSDHistEnrollData`, and any other repositories under the `UCSD-Historical-Enrollment-Data` organization) do not necessarily endorse these third-party projects. However, we believe they may be more useful for the _general public_ than the raw data that we store in this organization. 
+
+## Contacting Us
+There are two ways you can contact the project maintainers.
+- Any general questions or comments about the project can be directed to [the discussion tab](https://github.com/orgs/UCSD-Historical-Enrollment-Data/discussions). 
+- To contact the maintainers directly, you may reach out to:
+
+  | Name                  | Contact Email                |
+  | --------------------- | ---------------------------- |
+  | Ryan Batubara         | rbatubara at UCSD's domain   |
+  | Edward Wang           | ewang20027 at gmail's domain |
+
+  It is recommended that you email Ryan directly and CC Edward.
+
 ## License
-All files here and in the data repositories are licensed under the MIT license. If you'd like an explicit LICENSE file in the data repositories, please let me[^2] know.
+**All files here and in the data repositories are licensed under the MIT license.** If you'd like an explicit LICENSE file in the data repositories, please let me[^2] know.
 
-You're free to use this data for your own projects, but please be sure to cite this repository when using data found here so other people can use the data for their own projects.
+You're free to use this data for your own projects, but please be sure to cite this [repository](https://github.com/UCSD-Historical-Enrollment-Data/UCSDHistEnrollData/) when using data found here so other people can use the data for their own projects.
 
+As an aside, you do _not_ need to contact us if you plan on using the data that we collect, although we do love hearing how people are using our data! 
 
 [^1]: Graduate courses are not formally supported. Once I stop collecting undergraduate course enrollment data, I will also stop collecting graduate course enrollment data, which means some data (e.g., drop with W deadline) will not be collected.
 
