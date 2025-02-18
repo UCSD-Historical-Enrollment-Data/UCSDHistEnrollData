@@ -103,6 +103,7 @@ Below are a list of **third-party websites** using our data in some way.
 | Website | Features |
 | ------- | -------- |
 | [UC San Diego Course Registration Trend](https://www.ucsdregistration.com/) | A website that can display enrollment trends of multiple courses across different terms in one graph. See this [Reddit post](https://www.reddit.com/r/UCSD/comments/1gjuo36/i_made_a_website_to_help_make_course_registration/) for a synopsis of this website. |
+| [TritonSEA](http://triton-sea.com/) | A website designed to simplify your planning and help you make informed decisions, all in one place, including features like importing your degree audit and getting personalized class recommendations, viewing stats and enrollment information for clases in previous quarters, and more. See this [Reddit post](https://www.reddit.com/r/UCSD/comments/1io9qqa/enrollment_made_easier_tritonsea_spring_2025/) for a synopsis of this website. |
 
 Keep in mind that the maintainers of this project (`UCSDHistEnrollData`, and any other repositories under the `UCSD-Historical-Enrollment-Data` organization) do not necessarily endorse these third-party projects. However, we believe they may be more useful for the _general public_ than the raw data that we store in this organization. 
 
